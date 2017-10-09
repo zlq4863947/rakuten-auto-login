@@ -25,3 +25,5 @@ const input: InputType = {
 const marketSpeed = new MarketSpeed(input);
 marketSpeed.login();
 ```
+
+<p align="center"><img src="assets/rakuten-auto-login.gif"></p>
