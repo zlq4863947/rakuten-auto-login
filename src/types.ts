@@ -7,21 +7,21 @@ export interface InputType {
   /**
    * 用户名
    */
-  user: string,
+  user: string;
   /**
    * 密码
    */
-  password: string,
+  password: string;
   /**
    * 版本
    */
-  version: string,
+  version: string;
   /**
    * 目录
    */
-  dir: string,
+  dir: string;
   /**
    * 文件名
    */
-  filename: string
+  filename: string;
 }

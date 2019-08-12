@@ -1,19 +1,19 @@
-import { InputType } from './types';
 import * as path from 'path';
+
+import { InputType } from './types';
 const edge = require('edge-js');
 
-const modelPath = path.join(path.dirname(__filename), '/../../dll');
+const modelPath = path.join(path.dirname(__filename), '../../dll');
 const invokeLogin = edge.func({
   source: modelPath + '/marketspeed.cs',
   typeName: 'RakutenAutoLogin.MarketSpeed',
-  methodName: 'Login'
+  methodName: 'Login',
 });
 
 /**
  * 乐天证券对象类
  */
 export class MarketSpeed {
-
   input: InputType;
 
   /**
@@ -26,9 +26,7 @@ export class MarketSpeed {
 
   login() {
     return new Promise((resolve, reject) => {
-      setTimeout(() => reject(
-        new Error('cannnot login in 3000ms.')
-      ), 3000);
+      setTimeout(() => reject(new Error('cannnot login in 3000ms.')), 3000);
       return invokeLogin(this.input, (error: Error, result: any) => {
         return error ? reject(error) : resolve(result);
       });

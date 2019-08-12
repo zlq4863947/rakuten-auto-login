@@ -1,6 +1,6 @@
 # rekuten-auto-login
 
-楽天証券のMarketSpeedへの自動ログインモジュール
+楽天証券の MarketSpeed への自動ログインモジュール
 
 ## インストール
 
@@ -13,15 +13,15 @@ npm install rakuten-auto-login --save
 ```js
 import { MarketSpeed, InputType } from 'rakuten-auto-login';
 
-const config = require('../../config/config')
+const config = require('../../config/config');
 
 const input: InputType = {
   user: config.id,
   password: config.password,
   version: '15.4',
   dir: 'C:/Program Files (x86)/MarketSpeed/MarketSpeed',
-  filename: 'MarketSpeed.exe'
-}
+  filename: 'MarketSpeed.exe',
+};
 const marketSpeed = new MarketSpeed(input);
 marketSpeed.login();
 ```
