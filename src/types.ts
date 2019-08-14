@@ -3,7 +3,7 @@
  *
  * @interface
  */
-export interface InputType {
+export interface InputParams {
   /**
    * 用户名
    */
@@ -13,15 +13,11 @@ export interface InputType {
    */
   password: string;
   /**
-   * 版本
+   * 目录, 默认: "C:/Program Files (x86)/MarketSpeed/MarketSpeed"
    */
-  version: string;
+  dir?: string;
   /**
-   * 目录
+   * 文件名, 默认: "MarketSpeed.exe"
    */
-  dir: string;
-  /**
-   * 文件名
-   */
-  filename: string;
+  filename?: string;
 }
