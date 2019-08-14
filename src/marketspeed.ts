@@ -4,7 +4,7 @@ import { InputParams } from './types';
 
 const edge = require('edge-js');
 
-const modelPath = path.join(path.dirname(__filename), '../../dll');
+const modelPath = path.join(path.dirname(__filename), '../dll');
 const invokeFunc = edge.func({
   source: modelPath + '/marketspeed.cs',
   typeName: 'RakutenAutoLogin.MarketSpeed',
@@ -22,7 +22,7 @@ export class MarketSpeed {
    * @param input 入力参数
    */
   constructor(input: InputParams) {
-    this.invoke = invokeFunc(input);
+    this.invoke = invokeFunc(input, true);
   }
 
   login(): boolean {

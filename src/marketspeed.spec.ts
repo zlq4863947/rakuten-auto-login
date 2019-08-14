@@ -8,8 +8,8 @@ describe('楽天証券自動ログイン', () => {
       password: 'passxxx',
     };
     const marketSpeed = new MarketSpeed(input);
-    const res = marketSpeed.login();
-
+    // const res = marketSpeed.login();
+    const res = marketSpeed.startRSS();
     expect(res).toBeTruthy();
   });
 });
