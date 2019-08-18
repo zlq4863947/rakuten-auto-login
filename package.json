@@ -1,6 +1,6 @@
 {
   "name": "rakuten-auto-login",
-  "version": "0.9.5",
+  "version": "0.9.6",
   "description": "楽天証券のMarketSpeedへの自動ログインモジュール",
   "repository": {
     "type": "git",
